@@ -2,7 +2,7 @@
   <img src="./assets/ai-ambient.svg" width="100%" height="200" alt="AI Neural Network Background">
 </div>
 
-<h1 align="center">⚡ Tushar Thanvi ⚡</h1>
+<h1 align="center"> Tushar Thanvi </h1>
 <h3 align="center">AI/ML Researcher • Backend Engineer • Storyteller</h3>
 
 <div align="center">
@@ -31,20 +31,20 @@
 
 ---
 
-### 🏆 **LeetCode Neural Training**
+### 🏆 **LeetCode Training**
 
 <div align="center">
   <a href="https://leetcode.com/YOUR_LEETCODE/">
     <img src="https://leetcard.jacoblin.cool/TusharThanvi1990?theme=unicorn&font=JetBrains%20Mono&ext=heatmap" alt="LeetCode Stats" />
   </a>
   <br>
-  <img src="https://img.shields.io/badge/Problems%20Solved-500+-00F5D4?style=for-the-badge&logo=leetcode&logoColor=white" />
-  <img src="https://img.shields.io/badge/Contest%20Rating-1800+-FF6B6B?style=for-the-badge&logo=leetcode&logoColor=white" />
+<!--   <img src="https://img.shields.io/badge/Problems%20Solved-500+-00F5D4?style=for-the-badge&logo=leetcode&logoColor=white" />
+  <img src="https://img.shields.io/badge/Contest%20Rating-1800+-FF6B6B?style=for-the-badge&logo=leetcode&logoColor=white" /> -->
 </div>
 
 ---
 
-### 📊 **Neural Stats & Activity**
+### 📊 ** Stats & Activity**
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=TusharThanvi1990&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F5D4&icon_color=00F5D4&text_color=FFFFFF&border_radius=15" height="180"/>
@@ -68,16 +68,16 @@
 </div>
 ---
 
-### 🌐 **Neural Network Connections**
+### 🌐 ** Network Connections**
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">
+  <a href="https://www.linkedin.com/in/tushar-thanvi-5044a128b">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" />
   </a>
-  <a href="https://leetcode.com/YOUR_LEETCODE/">
+  <a href="https://leetcode.com/TusharThanvi1990/">
     <img src="https://img.shields.io/badge/LeetCode-Solve-FFA116?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=FFA116" />
   </a>
-  <a href="mailto:YOUR_EMAIL@gmail.com">
+  <a href="mailto:Tusharrt19069@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=D14836" />
   </a>
   <a href="https://github.com/TusharThanvi1990">
