@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Neural Snake Game | Tushar Thanvi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🐍 Neural Snake Game</h1>
+            <p class="subtitle">Navigate the neural pathways and grow your network!</p>
+        </header>
+        
+        <div class="game-info">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">High Score:</span>
+                    <span id="highScore" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Level:</span>
+                    <span id="level" class="value">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="gameOverOverlay" class="game-over-overlay hidden">
+                <div class="game-over-content">
+                    <h2>🎯 Game Over!</h2>
+                    <p id="finalScore">Final Score: 0</p>
+                    <p id="gameOverMessage">Neural network terminated. Reboot required!</p>
+                    <button id="restartBtn" class="btn">🚀 Restart Neural Network</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-section">
+                <h3>🎮 Controls</h3>
+                <div class="control-grid">
+                    <div class="control-row">
+                        <div class="key-btn">↑</div>
+                    </div>
+                    <div class="control-row">
+                        <div class="key-btn">←</div>
+                        <div class="key-btn">↓</div>
+                        <div class="key-btn">→</div>
+                    </div>
+                </div>
+                <p class="control-text">Use arrow keys or WASD to control the snake</p>
+            </div>
+            
+            <div class="game-controls">
+                <button id="pauseBtn" class="btn">⏸️ Pause</button>
+                <button id="newGameBtn" class="btn">🎮 New Game</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🧠 Neural Instructions</h3>
+            <ul>
+                <li>🎯 Guide your neural snake to consume data nodes (food)</li>
+                <li>📈 Each data node increases your network size and score</li>
+                <li>⚡ Avoid colliding with network boundaries or yourself</li>
+                <li>🚀 Speed increases as your neural network grows</li>
+                <li>🏆 Challenge yourself to achieve the highest neural score!</li>
+            </ul>
+        </div>
+
+        <footer class="game-footer">
+            <p>Built with ⚡ by <a href="https://github.com/TusharThanvi1990" target="_blank">Tushar Thanvi</a></p>
+            <p>Neural networks meet narratives 🧠✨</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

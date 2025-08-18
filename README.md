@@ -57,10 +57,34 @@
 
 ---
 
-### 🐍 Snake Animation
+### 🐍 Snake Animation & Game
+
 <div align="center">
-  <img src="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+  
+  **🎮 Play the Neural Snake Game!**
+  
+  <a href="./snake-game/index.html" target="_blank">
+    <img src="https://img.shields.io/badge/🐍_Play_Neural_Snake-00F5D4?style=for-the-badge&logo=gamepad&logoColor=white" alt="Play Snake Game"/>
+  </a>
+  
+  <p><em>A fully playable snake game with neural network theme!</em></p>
+  
 </div>
+
+<div align="center">
+  
+  **📊 GitHub Contribution Snake Animation**
+  
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg"/>
+  </picture>
+  
+  <p><em>Watch the snake consume my GitHub contributions!</em></p>
+  
+</div>
+
 ---
 
 ### 🌐 **Neural Network Connections**
