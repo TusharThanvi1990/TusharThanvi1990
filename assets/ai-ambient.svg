@@ -1,21 +1,27 @@
 <svg width="100%" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Gradient definitions -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#161B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D1117;stop-opacity:1" />
     </linearGradient>
     
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge> 
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <radialGradient id="nodeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00F5D4;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#00F5D4;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00F5D4;stop-opacity:0" />
+    </radialGradient>
     
-    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <linearGradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00F5D4;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#00F5D4;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#00F5D4;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge> 
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -26,164 +32,104 @@
   <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bgGradient)"/>
   
-  <!-- Grid Pattern -->
-  <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a8a" stroke-width="0.5" opacity="0.3"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#grid)" />
+  <!-- Floating particles -->
+  <g opacity="0.6">
+    <circle cx="100" cy="50" r="1" fill="#00F5D4">
+      <animate attributeName="cy" values="50;150;50" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="150" r="1.5" fill="#00F5D4">
+      <animate attributeName="cy" values="150;30;150" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="80" r="1" fill="#00F5D4">
+      <animate attributeName="cy" values="80;170;80" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="120" r="1.2" fill="#00F5D4">
+      <animate attributeName="cy" values="120;40;120" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="60" r="1" fill="#00F5D4">
+      <animate attributeName="cy" values="60;140;60" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1100" cy="100" r="1.3" fill="#00F5D4">
+      <animate attributeName="cy" values="100;180;100" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
   
-  <!-- Neural Network Nodes -->
-  <!-- Layer 1 -->
-  <circle cx="100" cy="50" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="100" cy="100" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="100" cy="150" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Layer 2 -->
-  <circle cx="300" cy="40" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="1;0.5;1" dur="2.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="300" cy="80" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="300" cy="120" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="1;0.6;1" dur="2.7s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="300" cy="160" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.1s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Layer 3 -->
-  <circle cx="500" cy="60" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="500" cy="100" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="1;0.7;1" dur="3.3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="500" cy="140" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Output Layer -->
-  <circle cx="700" cy="80" r="6" fill="#1e40af" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="1;0.8;1" dur="3.4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="700" cy="120" r="6" fill="#1e40af" filter="url(#nodeGlow)">
-    <animate attributeName="opacity" values="0.8;1;0.8" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Neural Connections -->
-  <g stroke="#3b82f6" stroke-width="1" fill="none" filter="url(#glow)">
-    <!-- Layer 1 to 2 connections -->
-    <line x1="100" y1="50" x2="300" y2="40" opacity="0.4">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/>
+  <!-- Neural network connections -->
+  <g stroke-width="1" fill="none">
+    <!-- Connection lines with flowing animation -->
+    <line x1="150" y1="100" x2="350" y2="70" stroke="url(#edgeGradient)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="3s" repeatCount="indefinite"/>
     </line>
-    <line x1="100" y1="50" x2="300" y2="80" opacity="0.3">
-      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.8s" repeatCount="indefinite"/>
+    <line x1="350" y1="70" x2="550" y2="130" stroke="url(#edgeGradient)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="3.5s" repeatCount="indefinite"/>
     </line>
-    <line x1="100" y1="100" x2="300" y2="80" opacity="0.5">
-      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.6s" repeatCount="indefinite"/>
+    <line x1="550" y1="130" x2="750" y2="90" stroke="url(#edgeGradient)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="4s" repeatCount="indefinite"/>
     </line>
-    <line x1="100" y1="100" x2="300" y2="120" opacity="0.4">
-      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4.2s" repeatCount="indefinite"/>
-    </line>
-    <line x1="100" y1="150" x2="300" y2="120" opacity="0.3">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.4s" repeatCount="indefinite"/>
-    </line>
-    <line x1="100" y1="150" x2="300" y2="160" opacity="0.4">
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.1s" repeatCount="indefinite"/>
+    <line x1="750" y1="90" x2="950" y2="120" stroke="url(#edgeGradient)" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="3.2s" repeatCount="indefinite"/>
     </line>
     
-    <!-- Layer 2 to 3 connections -->
-    <line x1="300" y1="40" x2="500" y2="60" opacity="0.3">
-      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.7s" repeatCount="indefinite"/>
+    <!-- Cross connections -->
+    <line x1="150" y1="100" x2="550" y2="130" stroke="url(#edgeGradient)" opacity="0.4" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;0,300" dur="5s" repeatCount="indefinite"/>
     </line>
-    <line x1="300" y1="80" x2="500" y2="60" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.9s" repeatCount="indefinite"/>
-    </line>
-    <line x1="300" y1="80" x2="500" y2="100" opacity="0.4">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.3s" repeatCount="indefinite"/>
-    </line>
-    <line x1="300" y1="120" x2="500" y2="100" opacity="0.6">
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.5s" repeatCount="indefinite"/>
-    </line>
-    <line x1="300" y1="120" x2="500" y2="140" opacity="0.4">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.4s" repeatCount="indefinite"/>
-    </line>
-    <line x1="300" y1="160" x2="500" y2="140" opacity="0.3">
-      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.3s" repeatCount="indefinite"/>
-    </line>
-    
-    <!-- Layer 3 to Output connections -->
-    <line x1="500" y1="60" x2="700" y2="80" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4.5s" repeatCount="indefinite"/>
-    </line>
-    <line x1="500" y1="100" x2="700" y2="80" opacity="0.6">
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.2s" repeatCount="indefinite"/>
-    </line>
-    <line x1="500" y1="100" x2="700" y2="120" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4.6s" repeatCount="indefinite"/>
-    </line>
-    <line x1="500" y1="140" x2="700" y2="120" opacity="0.4">
-      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3.1s" repeatCount="indefinite"/>
+    <line x1="350" y1="70" x2="750" y2="90" stroke="url(#edgeGradient)" opacity="0.3" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,300;150,150;0,300" dur="6s" repeatCount="indefinite"/>
     </line>
   </g>
   
-  <!-- Data Flow Particles -->
-  <circle r="2" fill="#60a5fa" opacity="0.8">
-    <animateMotion dur="6s" repeatCount="indefinite">
-      <path d="M100,50 Q200,30 300,40 Q400,50 500,60 Q600,70 700,80"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Neural nodes -->
+  <g filter="url(#glow)">
+    <circle cx="150" cy="100" r="8" fill="url(#nodeGradient)" stroke="#00F5D4" stroke-width="2">
+      <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="70" r="6" fill="url(#nodeGradient)" stroke="#00F5D4" stroke-width="1.5">
+      <animate attributeName="r" values="4;8;4" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="130" r="7" fill="url(#nodeGradient)" stroke="#00F5D4" stroke-width="2">
+      <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="90" r="6" fill="url(#nodeGradient)" stroke="#00F5D4" stroke-width="1.5">
+      <animate attributeName="r" values="4;8;4" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.95;0.7" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="950" cy="120" r="8" fill="url(#nodeGradient)" stroke="#00F5D4" stroke-width="2">
+      <animate attributeName="r" values="6;10;6" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
   
-  <circle r="2" fill="#3b82f6" opacity="0.8">
-    <animateMotion dur="5.5s" repeatCount="indefinite" begin="1s">
-      <path d="M100,100 Q200,90 300,80 Q400,85 500,100 Q600,110 700,120"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="5.5s" repeatCount="indefinite" begin="1s"/>
-  </circle>
+  <!-- Data flow signals -->
+  <g>
+    <circle r="3" fill="#00F5D4" opacity="0.8">
+      <animateMotion dur="4s" repeatCount="indefinite">
+        <path d="M150,100 L350,70 L550,130 L750,90 L950,120"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#FF6B6B" opacity="0.6">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
+        <path d="M950,120 L750,90 L550,130 L350,70 L150,100"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
   
-  <circle r="2" fill="#1d4ed8" opacity="0.8">
-    <animateMotion dur="6.5s" repeatCount="indefinite" begin="2s">
-      <path d="M100,150 Q200,140 300,160 Q400,150 500,140 Q600,130 700,120"/>
-    </animateMotion>
-    <animate attributeName="opacity" values="0;1;1;0" dur="6.5s" repeatCount="indefinite" begin="2s"/>
-  </circle>
-  
-  <!-- Floating Code Elements -->
-  <text x="850" y="50" font-family="'Courier New', monospace" font-size="12" fill="#3b82f6" opacity="0.6">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
-    AI/ML
-  </text>
-  
-  <text x="950" y="80" font-family="'Courier New', monospace" font-size="12" fill="#60a5fa" opacity="0.6">
-    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3.5s" repeatCount="indefinite"/>
-    Neural Networks
-  </text>
-  
-  <text x="850" y="120" font-family="'Courier New', monospace" font-size="12" fill="#1d4ed8" opacity="0.6">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4.2s" repeatCount="indefinite"/>
-    Deep Learning
-  </text>
-  
-  <text x="950" y="150" font-family="'Courier New', monospace" font-size="12" fill="#3b82f6" opacity="0.6">
-    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3.8s" repeatCount="indefinite"/>
-    Backend Dev
-  </text>
-  
-  <!-- Subtle Binary Background -->
-  <text x="20" y="30" font-family="'Courier New', monospace" font-size="8" fill="#1e3a8a" opacity="0.2">
-    010110100101011010010101101001010110100101011010010101101001
-  </text>
-  <text x="20" y="180" font-family="'Courier New', monospace" font-size="8" fill="#1e3a8a" opacity="0.2">
-    110101001010110100101011010010101101001010110100101011010010
-  </text>
+  <!-- Subtle brain wave pattern -->
+  <path d="M0,160 Q300,140 600,160 T1200,160" stroke="#00F5D4" stroke-width="1" fill="none" opacity="0.3">
+    <animate attributeName="d" 
+             values="M0,160 Q300,140 600,160 T1200,160;M0,160 Q300,180 600,160 T1200,160;M0,160 Q300,140 600,160 T1200,160" 
+             dur="6s" 
+             repeatCount="indefinite"/>
+  </path>
 </svg>
