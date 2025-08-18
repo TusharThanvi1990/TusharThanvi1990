@@ -1,0 +1,32 @@
+name: Generate GitHub contribution snake
+
+on:
+  schedule:
+    # daily at 00:00 UTC (change cron as you like)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate snake images (svg + dark + gif fallback)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
+            output/github-contribution-grid-snake.gif?color_snake=%23ffb86b
+
+      - name: Publish generated files to output branch
+        # pushes the 'output' folder to an 'output' branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
