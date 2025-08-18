@@ -34,7 +34,7 @@
 ### 🏆 **LeetCode Neural Training**
 
 <div align="center">
-  <a href="https://leetcode.com/YOUR_LEETCODE/">
+  <a href="https://leetcode.com/TusharThanvi1990/">
     <img src="https://leetcard.jacoblin.cool/YOUR_LEETCODE?theme=unicorn&font=JetBrains%20Mono&ext=heatmap" alt="LeetCode Stats" />
   </a>
   <br>
