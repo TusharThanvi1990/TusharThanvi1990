@@ -57,17 +57,10 @@
 
 ---
 
-### 🚀 **Featured Neural Projects**
-
+### 🐍 Snake Animation
 <div align="center">
-  
-| 🤖 **AI Research** | ⚙️ **Backend Systems** | 🎨 **Creative Tech** |
-|-------------------|------------------------|---------------------|
-| **Deep Learning Model Optimization** <br> Advanced neural architecture search and model compression techniques for edge deployment | **Scalable Microservices Platform** <br> High-performance backend infrastructure with auto-scaling and real-time analytics | **AI-Powered Storytelling Engine** <br> NLP-driven narrative generation combining creativity with machine intelligence |
-| `PyTorch` `CUDA` `TensorRT` | `Docker` `Kubernetes` `Redis` | `Transformers` `GPT` `Creative AI` |
-
+  <img src="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
 </div>
-
 ---
 
 ### 🌐 **Neural Network Connections**
