@@ -59,7 +59,12 @@
 
 ### 🐍 Snake Animation
 <div align="center">
-  <img src="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/USERNAME/USERNAME/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/USERNAME/USERNAME/output/github-contribution-grid-snake.svg" />
+  <img alt="github contributions snake" src="https://raw.githubusercontent.com/USERNAME/USERNAME/output/github-contribution-grid-snake.svg" />
+</picture>
+
 </div>
 ---
 
