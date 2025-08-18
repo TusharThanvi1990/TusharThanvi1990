@@ -1,27 +1,189 @@
-<svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode />
-        <feMergeNode in="blur" />
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-  <rect width="100%" height="100%" fill="#000" />
-  <circle cx="200" cy="300" r="20" fill="#00ffcc" filter="url(#glow)">
-    <animate attributeName="r" from="20" to="30" dur="1s" repeatCount="indefinite" />
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e3a8a" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Neural Network Nodes -->
+  <!-- Layer 1 -->
+  <circle cx="100" cy="50" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="400" cy="100" r="15" fill="#ff0080" filter="url(#glow)">
-    <animate attributeName="r" from="15" to="25" dur="1s" repeatCount="indefinite" />
+  <circle cx="100" cy="100" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="600" cy="400" r="25" fill="#00ccff" filter="url(#glow)">
-    <animate attributeName="r" from="25" to="35" dur="1s" repeatCount="indefinite" />
+  <circle cx="100" cy="150" r="3" fill="#60a5fa" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
   </circle>
-  <line x1="200" y1="300" x2="400" y2="100" stroke="#00ffcc" stroke-width="2">
-    <animate attributeName="stroke-opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-  </line>
-  <line x1="400" y1="100" x2="600" y2="400" stroke="#ff0080" stroke-width="2">
-    <animate attributeName="stroke-opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-  </line>
+  
+  <!-- Layer 2 -->
+  <circle cx="300" cy="40" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="80" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="120" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="160" r="4" fill="#3b82f6" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Layer 3 -->
+  <circle cx="500" cy="60" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="100" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="1;0.7;1" dur="3.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="140" r="5" fill="#1d4ed8" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Output Layer -->
+  <circle cx="700" cy="80" r="6" fill="#1e40af" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="1;0.8;1" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="120" r="6" fill="#1e40af" filter="url(#nodeGlow)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Neural Connections -->
+  <g stroke="#3b82f6" stroke-width="1" fill="none" filter="url(#glow)">
+    <!-- Layer 1 to 2 connections -->
+    <line x1="100" y1="50" x2="300" y2="40" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="50" x2="300" y2="80" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="100" x2="300" y2="80" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="100" x2="300" y2="120" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="150" x2="300" y2="120" opacity="0.3">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="150" x2="300" y2="160" opacity="0.4">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.1s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Layer 2 to 3 connections -->
+    <line x1="300" y1="40" x2="500" y2="60" opacity="0.3">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.7s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="80" x2="500" y2="60" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.9s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="80" x2="500" y2="100" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="120" x2="500" y2="100" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="120" x2="500" y2="140" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="300" y1="160" x2="500" y2="140" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.3s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Layer 3 to Output connections -->
+    <line x1="500" y1="60" x2="700" y2="80" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="500" y1="100" x2="700" y2="80" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="500" y1="100" x2="700" y2="120" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="500" y1="140" x2="700" y2="120" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3.1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Data Flow Particles -->
+  <circle r="2" fill="#60a5fa" opacity="0.8">
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <path d="M100,50 Q200,30 300,40 Q400,50 500,60 Q600,70 700,80"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="2" fill="#3b82f6" opacity="0.8">
+    <animateMotion dur="5.5s" repeatCount="indefinite" begin="1s">
+      <path d="M100,100 Q200,90 300,80 Q400,85 500,100 Q600,110 700,120"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="5.5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  
+  <circle r="2" fill="#1d4ed8" opacity="0.8">
+    <animateMotion dur="6.5s" repeatCount="indefinite" begin="2s">
+      <path d="M100,150 Q200,140 300,160 Q400,150 500,140 Q600,130 700,120"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;0" dur="6.5s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  
+  <!-- Floating Code Elements -->
+  <text x="850" y="50" font-family="'Courier New', monospace" font-size="12" fill="#3b82f6" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    AI/ML
+  </text>
+  
+  <text x="950" y="80" font-family="'Courier New', monospace" font-size="12" fill="#60a5fa" opacity="0.6">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3.5s" repeatCount="indefinite"/>
+    Neural Networks
+  </text>
+  
+  <text x="850" y="120" font-family="'Courier New', monospace" font-size="12" fill="#1d4ed8" opacity="0.6">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4.2s" repeatCount="indefinite"/>
+    Deep Learning
+  </text>
+  
+  <text x="950" y="150" font-family="'Courier New', monospace" font-size="12" fill="#3b82f6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3.8s" repeatCount="indefinite"/>
+    Backend Dev
+  </text>
+  
+  <!-- Subtle Binary Background -->
+  <text x="20" y="30" font-family="'Courier New', monospace" font-size="8" fill="#1e3a8a" opacity="0.2">
+    010110100101011010010101101001010110100101011010010101101001
+  </text>
+  <text x="20" y="180" font-family="'Courier New', monospace" font-size="8" fill="#1e3a8a" opacity="0.2">
+    110101001010110100101011010010101101001010110100101011010010
+  </text>
 </svg>
