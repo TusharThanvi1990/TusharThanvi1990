@@ -23,10 +23,9 @@ jobs:
             output/github-contribution-grid-snake.gif?color_snake=%23ffb86b
 
       - name: Publish generated files to output branch
-        # pushes the 'output' folder to an 'output' branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
-          target_branch: output
+          target_branch: output   # will auto-create if it doesn’t exist
           build_dir: output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
