@@ -24,7 +24,7 @@ jobs:
 
       - name: Publish generated files to output branch
         # pushes the 'output' folder to an 'output' branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: output
