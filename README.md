@@ -11,7 +11,7 @@
 
 ---
 
-### 🧠 **Core Knowledge Graph**
+### 🧠 Core Knowledge Graph
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,cpp,java,js,ts,react,nodejs,nestjs,flask,fastapi,docker,kubernetes,aws,gcp,git,linux,postgresql,mongodb,redis&perline=7" />
