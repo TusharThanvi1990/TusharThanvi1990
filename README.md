@@ -31,7 +31,7 @@
 
 ---
 
-### 🏆 **LeetCode Training**
+### 🏆 LeetCode Training
 
 <div align="center">
   <a href="https://leetcode.com/YOUR_LEETCODE/">
