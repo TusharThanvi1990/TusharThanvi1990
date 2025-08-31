@@ -35,7 +35,8 @@
 
 <div align="center">
   <a href="https://leetcode.com/YOUR_LEETCODE/">
-    <img src="https://leetcard.jacoblin.cool/TusharThanvi1990?theme=unicorn&font=JetBrains%20Mono&ext=heatmap" alt="LeetCode Stats" />
+   <img src="https://leetcard.jacoblin.cool/TusharThanvi1990?theme=dark&font=JetBrains%20Mono&ext=heatmap" />
+
   </a>
   <br>
 <!--   <img src="https://img.shields.io/badge/Problems%20Solved-500+-00F5D4?style=for-the-badge&logo=leetcode&logoColor=white" />
