@@ -69,7 +69,7 @@
 </div>
 ---
 
-### 🌐 ** Network Connections**
+### 🌐  Network Connections
 
 <div align="center">
   <a href="https://www.linkedin.com/in/tushar-thanvi-5044a128b">
