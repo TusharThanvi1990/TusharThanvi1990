@@ -35,7 +35,8 @@
 
 <div align="center">
   <a href="https://leetcode.com/YOUR_LEETCODE/">
-   <img src="https://leetcard.jacoblin.cool/TusharThanvi1990?theme=dark&font=JetBrains%20Mono&ext=heatmap" />
+  <img src="https://leetcard.jacoblin.cool/TusharThanvi1990?theme=dark&font=JetBrains%20Mono&ext=heatmap&heatmap=0d1117,00ff99,00cc66,009944,006622" />
+
 
   </a>
   <br>
