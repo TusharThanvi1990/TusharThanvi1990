@@ -6,7 +6,7 @@
 <h3 align="center">AI/ML Researcher • Backend Engineer • Storyteller</h3>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&duration=3000&pause=500&color=00F5D4&center=true&vCenter=true&width=800&lines=Neural+Networks+meet+Narratives+⚡;Systems+that+Scale%2C+Models+that+Learn+🚀;Transforming+Ideas+into+Intelligent+Solutions+💡;Building+the+Future%2C+One+Algorithm+at+a+Time+🌟" alt="Typing Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&duration=3000&pause=500&color=00F5D4&center=true&vCenter=true&width=800&lines=Neural+Networks+meet+Narratives+⚡;Systems+that+Scale%2C+Models+that+Learn;Transforming+Ideas+into+Intelligent+Solutions;Building+the+Future%2C+One+Algorithm+at+a+Time" alt="Typing Animation">
 </div>
 
 ---
