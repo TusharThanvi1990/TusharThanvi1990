@@ -11,7 +11,7 @@
 
 ---
 
-### 🧠 Core Knowledge Graph
+###  Core Knowledge Graph
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,cpp,java,js,ts,react,nodejs,nestjs,flask,fastapi,docker,kubernetes,aws,gcp,git,linux,postgresql,mongodb,redis&perline=7" />
@@ -19,19 +19,19 @@
 
 <div align="center">
   
-**🤖 AI/ML Stack:** `TensorFlow` • `PyTorch` • `Scikit-learn` • `Hugging Face` • `OpenCV` • `NLTK` • `spaCy`
+** AI/ML Stack:** `TensorFlow` • `PyTorch` • `Scikit-learn` • `Hugging Face` • `OpenCV` • `NLTK` • `spaCy`
 
-**⚙️ Backend & Systems:** `Python` • `Node.js` • `C++` • `Java` • `Flask` • `FastAPI` • `NestJS` • `Express`
+** Backend & Systems:** `Python` • `Node.js` • `C++` • `Java` • `Flask` • `FastAPI` • `NestJS` • `Express`
 
-**☁️ Cloud & DevOps:** `AWS` • `GCP` • `Docker` • `Kubernetes` • `CI/CD` • `Terraform` • `Linux`
+** Cloud & DevOps:** `AWS` • `GCP` • `Docker` • `Kubernetes` • `CI/CD` • `Terraform` • `Linux`
 
-**📊 Data & Databases:** `PostgreSQL` • `MongoDB` • `Redis` • `Apache Spark` • `Elasticsearch` • `Vector DBs`
+** Data & Databases:** `PostgreSQL` • `MongoDB` • `Redis` • `Apache Spark` • `Elasticsearch` • `Vector DBs`
 
 </div>
 
 ---
 
-### 🏆 LeetCode Training
+###  LeetCode Training
 
 <div align="center">
   <a href="https://leetcode.com/YOUR_LEETCODE/">
@@ -46,7 +46,7 @@
 
 ---
 
-### 📊 ** Stats & Activity**
+###  ** Stats & Activity**
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=TusharThanvi1990&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F5D4&icon_color=00F5D4&text_color=FFFFFF&border_radius=15" height="180"/>
@@ -59,7 +59,7 @@
 
 ---
 
-### 🐍 Snake Animation
+###  Snake Animation
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TusharThanvi1990/TusharThanvi1990/output/github-contribution-grid-snake-dark.svg" />
@@ -70,7 +70,7 @@
 </div>
 ---
 
-### 🌐  Network Connections
+###   Network Connections
 
 <div align="center">
   <a href="https://www.linkedin.com/in/tushar-thanvi-5044a128b">
@@ -89,7 +89,7 @@
 
 ---
 
-### 🎯 **AI Console Interface**
+###  **AI Console Interface**
 
 ```python
 >>> import neural_networks as nn
@@ -106,15 +106,15 @@ class TusharThanvi(nn.Researcher, nn.Engineer):
             'creative': ['Storytelling', 'Technical Writing', 'UI/UX Design']
         }
         self.research_focus = "Bridging AI capabilities with real-world applications"
-        self.motto = "Neural networks meet narratives ⚡"
-        self.status = "Always learning, always building 🚀"
+        self.motto = "Neural networks meet narratives "
+        self.status = "Always learning, always building "
     
     def solve_problem(self, challenge):
         solution = self.apply_ai(challenge) + self.engineering_mindset(challenge)
         return f"Innovative solution with {solution.efficiency}% optimization"
     
     def __str__(self):
-        return f"🤖 AI Researcher | 💻 Systems Builder | 📖 Story Weaver"
+        return f" AI Researcher |  Systems Builder |  Story Weaver"
 
 # Initialize the neural network
 tushar = TusharThanvi()
