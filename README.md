@@ -19,13 +19,13 @@
 
 <div align="center">
   
-** AI/ML Stack:** `TensorFlow` • `PyTorch` • `Scikit-learn` • `Hugging Face` • `OpenCV` • `NLTK` • `spaCy`
+**AI/ML Stack:** `TensorFlow` • `PyTorch` • `Scikit-learn` • `Hugging Face` • `OpenCV` • `NLTK` • `spaCy`
 
-** Backend & Systems:** `Python` • `Node.js` • `C++` • `Java` • `Flask` • `FastAPI` • `NestJS` • `Express`
+**Backend & Systems:** `Python` • `Node.js` • `C++` • `Java` • `Flask` • `FastAPI` • `NestJS` • `Express`
 
-** Cloud & DevOps:** `AWS` • `GCP` • `Docker` • `Kubernetes` • `CI/CD` • `Terraform` • `Linux`
+**Cloud & DevOps:** `AWS` • `GCP` • `Docker` • `Kubernetes` • `CI/CD` • `Terraform` • `Linux`
 
-** Data & Databases:** `PostgreSQL` • `MongoDB` • `Redis` • `Apache Spark` • `Elasticsearch` • `Vector DBs`
+**Data & Databases:** `PostgreSQL` • `MongoDB` • `Redis` • `Apache Spark` • `Elasticsearch` • `Vector DBs`
 
 </div>
 
@@ -46,7 +46,7 @@
 
 ---
 
-###  ** Stats & Activity**
+###  **Stats & Activity**
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=TusharThanvi1990&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F5D4&icon_color=00F5D4&text_color=FFFFFF&border_radius=15" height="180"/>
