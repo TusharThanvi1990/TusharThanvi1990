@@ -33,7 +33,7 @@ take on service work, and publish research.
 | :--- | :--- | :--- |
 | **[Namaha PDF](https://pdf.namahatech.com/)** | PDF editor with annotation, conversion, splitting and merging. Rendering engine written from scratch instead of wrapping an existing one. Draws 1,000 to 2,000 organic visitors a month. | TypeScript |
 | **NeuroTree** | Chess engine pairing a CNN trained on 500,000+ positions with Monte Carlo tree search for move selection. | Python, PyTorch |
-| **TendrAI** | Tender intelligence for contractors and small businesses: bid discovery, drafting assistance, and ML bid price prediction. | [fill in] |
+
 
 <!-- Pin these same repos on your profile so the table and the pins agree.
      Drop the TendrAI row if it is not public yet. A row a reader cannot
