@@ -76,14 +76,7 @@ augmentation of medical imaging datasets.
 
 <br>
 
-## Activity
 
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=TusharThanvi1990&show_icons=true&hide_border=true&bg_color=00000000&title_color=6b7280&icon_color=6b7280&text_color=6b7280&hide=issues&hide_rank=true" height="150" alt="GitHub stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TusharThanvi1990&layout=compact&hide_border=true&bg_color=00000000&title_color=6b7280&text_color=6b7280&langs_count=6" height="150" alt="Top languages">
-</p>
-
-<br>
 
 ---
 
